@@ -11,6 +11,19 @@ section {
   margin-top: 1rem;
   font-size: 2rem;
   border-radius: 5rem;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .btn {
@@ -55,15 +68,39 @@ header .user img {
   object-fit: cover;
   margin-bottom: 1rem;
   border: 0.7rem solid var(--red);
+  animation: Zoom 1s ease forwards;
+  animation-delay: 2s, 3s;
+  opacity: 0;
+}
+@keyframes Zoom {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 header .user .name {
   font-size: 3.5rem;
   color: #fff;
+  animation: SlideLeft 1s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
 }
+
+header .user span {
+  color: var(--red);
+}
+
 header .user .post {
   font-size: 2rem;
   color: #eee;
+  animation: SlideRight 1s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
 }
 
 header .navbar {
@@ -85,6 +122,12 @@ header .navbar ul li a {
 }
 header .navbar ul li a:hover {
   background: var(--red);
+}
+
+.navbar a {
+  animation: slideTop 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: calc(0.2s * var(--clr));
 }
 
 #menu {
@@ -109,11 +152,36 @@ header .navbar ul li a:hover {
 .home h3 {
   font-size: 2.5rem;
   color: #fff;
+  animation: slideBottom 0.7s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .home h1 {
   font-size: 5rem;
   color: #fff;
+  animation: SlideRight 1s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+@keyframes SlideRight {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .home span {
   color: var(--red);
@@ -123,6 +191,20 @@ header .navbar ul li a:hover {
   font-size: 2rem;
   color: #eee;
   padding: 1rem 0;
+  animation: SlideLeft 1s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+@keyframes SlideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .about .row {
@@ -174,60 +256,6 @@ header .navbar ul li a:hover {
 .about .row .counter .box h3 {
   font-size: 2rem;
   color: #fff;
-}
-
-.wrapper-skill {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wrapper-skill .skill-tec {
-  width: 430px;
-  margin-bottom: 40px;
-}
-
-.wrapper-skill .skill-tec:nth-child(odd) {
-  margin-right: 100px;
-}
-
-.wrapper-skill .progress-bar {
-  width: 320px;
-}
-
-.skill-tec {
-  display: flex;
-  align-items: center;
-  font-family: "Press Start 2P", sans-serif;
-  font-size: 25px;
-  color: #fff;
-}
-.skill-tec .icon {
-  margin-right: 25px;
-  width: 90px;
-}
-
-.skill-tec .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.skill-tec .title {
-  margin-bottom: 10px;
-}
-
-.progress-bar {
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 5px solid #000;
-  height: 40px;
-}
-
-.progress-bar::-webkit-progress-value {
-  background-color: var(--red);
 }
 
 .education .box-container {

@@ -26,3 +26,11 @@ $(document).ready(function () {
     );
   });
 });
+
+var type = new Typed(".textline", {
+  strings: ["Frontend Devloper", "Designer", "Student"],
+  typeSpeed: 50,
+  backSpeed: 50,
+  backDelay: 1000,
+  loop: true,
+});
