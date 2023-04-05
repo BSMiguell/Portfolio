@@ -258,6 +258,60 @@ header .navbar ul li a:hover {
   color: #fff;
 }
 
+.wrapper-skill {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper-skill .skill-tec {
+  width: 430px;
+  margin-bottom: 40px;
+}
+
+.wrapper-skill .skill-tec:nth-child(odd) {
+  margin-right: 100px;
+}
+
+.wrapper-skill .progress-bar {
+  width: 320px;
+}
+
+.skill-tec {
+  display: flex;
+  align-items: center;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+.skill-tec .icon {
+  margin-right: 25px;
+  width: 90px;
+}
+
+.skill-tec .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skill-tec .title {
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 5px solid #000;
+  height: 40px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: var(--red);
+}
+
 .education .box-container {
   display: flex;
   align-items: center;
@@ -328,7 +382,7 @@ header .navbar ul li a:hover {
   width: 100%;
   object-fit: cover;
 }
-portfolio .box-container .box:hover img {
+.portfolio .box-container .box:hover img {
   transform: scale(1.2);
 }
 
